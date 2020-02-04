@@ -194,6 +194,39 @@ const puissance4 = (grid) => {
             found = checkVictory(col)
         }
     })
+    // test de la diagonale
+    let deltaX = 0
+    let deltaY = 0
+    while (4 + deltaX <= grid[0].length && !found){
+        let diag = []
+        let diagMirror = []
+        for(var i = 0; i < Math.min(grid.length, grid[0].length); i++){
+            const x = i + deltaX
+            const y = i + deltaY
+            const len = grid.length
+            if (grid[i + deltaX]) diag.push(grid[i + deltaX][i + deltaY])
+            if (grid[len - x]) diagMirror.push(grid[len - x][y])
+        }
+        deltaX ++
+        found = checkVictory(diag)
+        found = found ? found : checkVictory(diagMirror)
+    }
+
+    while (4 + deltaY <= grid.length && !found){
+        let diag = []
+        let diagMirror = []
+        for(var i = 0; i < Math.min(grid.length, grid[0].length); i++){
+            const x = i + deltaX
+            const y = i + deltaY
+            const len = grid.length
+            if (grid[i + deltaX]) diag.push(grid[i + deltaX][i + deltaY])
+            if (grid[len - x]) diagMirror.push(grid[len - x][y])
+        }
+        deltaY++
+        found = checkVictory(diag)
+        found = found ? found : checkVictory(diagMirror)
+    }
+
     return found
 }
 
