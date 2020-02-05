@@ -23,3 +23,13 @@ test('On affiche bien les informations textuels sur la card', () => {
   expect(email_line.textContent).not.toMatch("  ")
 })
 
+test("L'image est bien affiché de façon correct", () => {
+  act (() => {
+    render(<App></App>, );
+  })
+
+  const img = document.querySelector("[data-testid='user-img']")
+  expect(img).toBeInTheDocument
+  expect(img).src.not.toMatch(" ")
+
+})

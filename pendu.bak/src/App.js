@@ -1,5 +1,5 @@
 import React from "react";
-import Hangman from "./components/Hangman";
+import Hangman from "../../pendu/src/components/Hangman";
 
 function App() {
 	return (
