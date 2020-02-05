@@ -11,10 +11,10 @@ jobs:
           command: yarn global add jest && cd javascript && ~/.yarn/bin/jest javascript/test.js && cd ..
       - run:
           name: test button
-          command: cd button && yarn install & cd src & cd components && yarn install && cd button && yarn install && yarn test Button.test.js && cd .. && cd .. && cd .. && cd ..
+          command: cd button && yarn install && yarn test Button.test.js && cd ..
       - run:
           name: test timer
-          command: cd timer && yarn install & cd src & cd components && yarn install && cd timer && yarn install && yarn test Timer.test.js && cd .. && cd .. && cd .. && cd ..
+          command: cd timer && yarn install && yarn test Timer.test.js && cd ..
       - store_artifacts:
           path: test-results.xml
           prefix: tests
