@@ -21,7 +21,7 @@ class Timer extends React.Component {
       <div data-testid="timer">
         <span data-testid="timerValue">{this.state.counter}</span>
         <br/>
-        <button id={"pauseButton"} data-testid="pauseButton" onClick={() => {this.pause ? this.pause = false : this.pause = true; this.pause ? document.querySelector('#pauseButton').innerHTML = 'Reprendre le timer' : document.querySelector('#pauseButton').innerHTML = 'Mettre le timer en pause'; console.log(this.pause)} }>
+        <button id={"pauseButton"} data-testid="pauseButton" onClick={() => {this.pause ? this.pause = false : this.pause = true; this.pause ? document.querySelector('#pauseButton').innerHTML = 'Reprendre le timer' : document.querySelector('#pauseButton').innerHTML = 'Mettre le timer en pause';} }>
           Mettre le timer en pause
         </button>
       </div>
