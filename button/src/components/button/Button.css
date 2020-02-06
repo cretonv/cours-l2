@@ -1,6 +1,63 @@
 .toggled {
-  border: 1px solid red;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 3vh;
+  overflow: hidden;
+  padding: 5px;
 }
 .untoggled {
-  border: 1px solid blue;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 3vh;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.toggled a {
+  z-index: 1;
+  padding: 10px;
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: red 0 0px 0px 2px inset;
+  font-size: 40px;
+}
+
+.untoggled a {
+  z-index: 1;
+  padding: 10px;
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: blue 0 0px 0px 2px inset;
+  font-size: 40px;
+}
+
+/*a.toggled {
+  color: #FBBA72;
+  box-shadow: #FBBA72 0 0px 0px 2px inset;
+  transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+
+a.untoggled {
+  color: #FBBA72;
+  box-shadow: #FBBA72 0 0px 0px 2px inset;
+  transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}*/
+
+a#button1:hover {
+  color: #691E06;
+  box-shadow: #FBBA72 0 0px 0px 40px inset;
+  transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
+}
+
+a#button2:hover {
+  color: #691E06;
+  box-shadow: #FBBA72 0 80px 0px 2px inset;
+  transition: box-shadow 1s cubic-bezier(0.390, 0.500, 0.150, 1.360), color 1s;
 }

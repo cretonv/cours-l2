@@ -43,4 +43,24 @@ const data = {
     }
 };
 
+/*class Data {
+
+    constructor() {
+
+    fetch('https://randomuser.me/api/')
+        .then(res => res.json())
+        .then(res => {
+            console.log('Salut')
+            console.log(res.results[0])
+            this.data = res.results[0]
+        })
+        console.log('NTM')
+        console.log(this.data)
+        return(this.data)
+    }
+
+
+
+}*/
+
 export default data

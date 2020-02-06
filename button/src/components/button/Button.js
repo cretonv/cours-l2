@@ -8,6 +8,9 @@ class Button extends React.Component {
     super(props)
     this.state = {toggled: false}
     this.handleClick = this.handleClick.bind(this)
+    this.case = document.querySelector('#choixAnim')
+    this.idButton = "button1"
+    console.log(this.case)
   }
 
   handleClick() {
@@ -17,15 +20,19 @@ class Button extends React.Component {
     })
   }
 
+  changeAnim(newAnim) {
+    this.idButton = newAnim
+  }
+
   render() {
     return (
-      <button
+      <div
          data-testid="button"
          className={this.state.toggled ? 'toggled' : 'untoggled'}
          onClick={this.handleClick}
       >
-      {this.props.children ? this.props.children : "Add text!"}
-      </button>);
+        <a id={this.idButton} >{this.props.children ? this.props.children : "Add text!"}</a>
+      </div>);
   }
 
 }

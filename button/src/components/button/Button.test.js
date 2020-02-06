@@ -22,7 +22,7 @@ it('renders without crashing', () => {
     render(<Button>Hello, world!</Button>, container);
   });
   expect(document.querySelector("[data-testid='button']").textContent).toMatch(
-    "Hello, world!"
+      "Hello, world!"
   );
 
   act( () => {

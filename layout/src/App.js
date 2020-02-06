@@ -4,6 +4,13 @@ import './App.css';
 import data from './user.js'
 
 function App() {
+
+/*    const data_tab = new Data
+    const data = data_tab.valueOf(data)
+    console.log('perdu')
+    console.log(data)*/
+
+
     return (
         <div className="App">
             <div className="container-fluid card-color">
@@ -25,7 +32,6 @@ function App() {
                 </div>
             </div>
         </div>
-
     );
 }
 
