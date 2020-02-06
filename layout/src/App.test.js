@@ -30,6 +30,6 @@ test("L'image est bien affiché de façon correct", () => {
 
   const img = document.querySelector("[data-testid='user-img']")
   expect(img).toBeInTheDocument
-  expect(img).src.not.toMatch(" ")
+  expect(img.src).not.toMatch(" ")
 
 })
