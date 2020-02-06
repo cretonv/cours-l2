@@ -42,3 +42,22 @@ it('renders without crashing', () => {
   );
 
 });
+
+test('Présence et fonctionnement du bouton pause', () => {
+  jest.useFakeTimers();
+
+  act( () => {
+    render(<Timer />, container);
+  });
+  const bouton = document.querySelector("[data-testid='pauseButton']")
+  expect(bouton).toBeInTheDocument
+
+  act( () => {
+    jest.advanceTimersByTime(1000);
+    document.querySelector("[data-testid='pauseButton']").click()
+    jest.advanceTimersByTime(1000);
+  })
+  expect(document.querySelector("[data-testid='timerValue']").textContent).toMatch(
+      "1"
+  );
+})
